@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <title>Sarawat — private preview</title>
+  <script>try{if(sessionStorage.getItem('preview-key:'+location.pathname.replace(/[^/]*$/,'')))document.documentElement.className='known'}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75..100,400..800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 28px 20px;
+      background: #dcdedd; color: #15161a; font-family: "Bricolage Grotesque", "IBM Plex Sans Arabic", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    /* Control strip and a halftone rosette at true screen angles */
+    body::before { content: ""; position: fixed; inset: 0 0 auto; height: 8px; background: repeating-linear-gradient(90deg, #009fe3 0 26px, #e6007e 0 52px, #ffe100 0 78px, #15161a 0 104px, #fcfcfa 0 116px, #312783 0 142px, #009640 0 168px, #e30613 0 194px, #fcfcfa 0 206px); }
+    .dots { position: fixed; inset: 0; overflow: hidden; z-index: -1; }
+    .dots i { position: absolute; inset: -60%; mix-blend-mode: multiply; -webkit-mask: radial-gradient(closest-side at 64% 62%, #000, #0000 72%); mask: radial-gradient(closest-side at 64% 62%, #000, #0000 72%); background: radial-gradient(circle, var(--ink) 34%, #0000 36%) 0 0 / 15px 15px; rotate: var(--a); }
+    main { position: relative; width: min(100%, 430px); background: #fcfcfa; padding: 52px 40px 40px; }
+    main i { position: absolute; width: 22px; height: 22px; background: linear-gradient(#15161a, #15161a) 100% 0 / 1.5px 14px no-repeat, linear-gradient(#15161a, #15161a) 0 100% / 14px 1.5px no-repeat; }
+    main i:nth-of-type(1) { left: 8px; top: 8px; } main i:nth-of-type(2) { right: 8px; top: 8px; transform: scaleX(-1); }
+    main i:nth-of-type(3) { left: 8px; bottom: 8px; transform: scaleY(-1); } main i:nth-of-type(4) { right: 8px; bottom: 8px; transform: scale(-1); }
+    .mark { display: block; width: 172px; height: auto; }
+    h1 { margin: 34px 0 0; font-weight: 800; font-stretch: 75%; font-size: 44px; line-height: .92; letter-spacing: -.022em; }
+    .note { margin: 14px 0 0; font-size: 16px; line-height: 1.45; color: #4d5056; }
+    .note[lang="ar"] { margin: 6px 0 26px; line-height: 1.8; font-size: 15px; text-align: right; }
+    form { display: grid; gap: 12px; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    input { width: 100%; padding: 14px 16px; border: 2px solid #15161a; border-radius: 0; background: #fff; color: inherit; font-family: inherit; font-size: 17px; font-weight: 600; line-height: 1.2; }
+    input:focus { outline: 3px solid #009fe3; outline-offset: 2px; }
+    button { min-height: 52px; border: 0; cursor: pointer; background: #15161a; color: #fcfcfa; font-family: inherit; font-size: 17px; font-weight: 700; line-height: 1; transition: background .2s; }
+    button:hover { background: #e6007e; } button:focus-visible { outline: 3px solid #009fe3; outline-offset: 2px; }
+    button:disabled { opacity: .6; cursor: progress; }
+    .err { min-height: 1.4em; margin: 2px 0 0; font-size: 15px; font-weight: 600; color: #b4002f; }
+    .known main { visibility: hidden; }
+    @media (max-width: 480px) { main { padding: 46px 26px 30px; } }
+  </style>
+</head>
+<body>
+  <div class="dots" aria-hidden="true"><i style="--ink:#009fe3;--a:15deg"></i><i style="--ink:#e6007e;--a:75deg"></i><i style="--ink:#ffe100;--a:0deg"></i></div>
+  <main>
+    <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+    <svg class="mark" viewBox="4 7 153 61" role="img" aria-label="Sarawat"><g fill="#7f2728" fill-rule="evenodd"><path d="M28.3 12.6H14Q12.3 12.6 12.3 13.8 12.3 15 14 15H19.5Q25.3 15 25.3 21 25.3 27 19.5 27H5L7 22.3H18.7Q20 22.3 20 20.9 20 19.6 18.7 19.6H13.5Q7.4 19.6 7.4 13.8 7.4 8 13.5 8H27.3Z"/><path d="M32.2 8H38.2L50.5 37H45.3L38.9 22.9 36.9 27H24.5ZM35.3 15 31.9 22.3H38.4Z"/><path d="M46.6 8H59.5Q66 8 66 13.9 66 19.6 60 19.6H58L64.6 27H58.5L52.2 20 56 15.6H59Q61 15.6 61 14.1 61 12.6 59 12.6H51.6V27H48.2L46.6 23.2Z"/><path d="M72.3 8H78.3L86.6 27H81L79.2 22.9 77 27H64.9ZM75.4 15 72 22.3H78.6Z"/><path d="M84 8H90L92.3 13.5 89.6 20ZM95.5 8H106.5L101 20ZM95 19.4 98.5 27H91.5Z"/><path d="M112 8H118L126.2 27H120.4L118.8 22.9 116.6 27H104.2ZM115.1 15 111.8 22.3H118.3Z"/><path d="M121.3 8H139.7L138.2 12.6H132.7V27H127V12.6H119.8Z"/></g><g fill="#2a3768" fill-rule="evenodd"><path d="M150.5 8H156.5V66.5H150.5Z"/><path d="M141 8H147V58H128.2L130.5 52.7H141Z"/><path d="M91.3 32.3H98.7L107.7 52 110.7 44.6 105.6 32.3H112.2L120.2 51.5 129 32.3H135L123.8 58H116.2L113.8 52.6 111.5 58H104.2L94.8 38 81.3 66.5H75.2Z"/><path d="M116.5 32.3H124L120.2 40.6ZM94.8 49.4 98.5 58H91.4Z"/><path d="M63 32.3H86.5L70.3 66.5H64.2L73 48H67.4L63 38.2ZM69 37.6H78L73.4 47.2Z"/><path d="M53.6 32.3H59.6V66.5H53.6Z"/><path d="M5.5 47H11V61H43.7V42.7H49.7V66.5H5.5ZM16 47H22V53H16ZM26 47H32V53H26Z"/></g></svg>
+    <h1>Private preview</h1>
+    <p class="note">Enter the password you were given.</p>
+    <p class="note" lang="ar" dir="rtl">نسخة خاصة للمعاينة. أدخل كلمة المرور.</p>
+    <form id="unlock">
+      <label for="pw" class="sr">Password</label>
+      <input id="pw" type="password" autocomplete="current-password" placeholder="Password" required autofocus>
+      <button type="submit">Unlock</button>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+  </main>
+  <script>
+  (() => {
+    const ITER = 310000;
+    const dir = location.pathname.replace(/[^/]*$/, '');
+    const KEY = 'preview-key:' + dir;
+    const name = location.pathname.split('/').pop() || 'index.html';
+    const form = document.getElementById('unlock');
+    const input = document.getElementById('pw');
+    const btn = form.querySelector('button');
+    const err = document.getElementById('err');
+    const payload = fetch(dir + 'payload.bin', { cache: 'no-cache' }).then((r) => {
+      if (!r.ok) throw new Error('missing');
+      return r.arrayBuffer();
+    });
+    payload.catch(() => {});
+
+    async function derive(pw) {
+      if (!window.crypto || !crypto.subtle) throw new Error('insecure');
+      const salt = (await payload).slice(0, 16);
+      const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveKey']);
+      return crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: ITER, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, true, ['decrypt']);
+    }
+    async function open(key) {
+      const buf = await payload;
+      const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(16, 28) }, key, buf.slice(28));
+      const headLen = new DataView(plain).getUint32(0);
+      const head = JSON.parse(new TextDecoder().decode(new Uint8Array(plain, 4, headLen)));
+      const start = 4 + headLen;
+      let html = head.pages[name] || head.pages['index.html'];
+      for (const a of head.assets) {
+        if (!html.includes(a.path)) continue;
+        const url = URL.createObjectURL(new Blob([new Uint8Array(plain, start + a.offset, a.length)], { type: a.type }));
+        html = html.split(a.path).join(url);
+      }
+      // Remember the derived key for this tab only, never the password itself
+      try {
+        const raw = new Uint8Array(await crypto.subtle.exportKey('raw', key));
+        sessionStorage.setItem(KEY, btoa(String.fromCharCode(...raw)));
+      } catch (e) {}
+      document.open();
+      document.write(html);
+      document.close();
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      err.textContent = '';
+      btn.disabled = true; btn.textContent = 'Unlocking…';
+      try {
+        await open(await derive(input.value.trim()));
+      } catch (ex) {
+        btn.disabled = false; btn.textContent = 'Unlock';
+        err.textContent = ex && ex.message === 'insecure' ? 'Open this page over https to unlock it.'
+          : ex && ex.message === 'missing' ? 'The preview file is missing. Try again in a minute.'
+          : 'That password didn’t work. Check it and try again.';
+        input.select();
+      }
+    });
+
+    // Same tab, same session: open the next page without asking again
+    let saved = null;
+    try { saved = sessionStorage.getItem(KEY); } catch (e) {}
+    if (saved) {
+      (async () => {
+        const raw = Uint8Array.from(atob(saved), (c) => c.charCodeAt(0));
+        await open(await crypto.subtle.importKey('raw', raw, 'AES-GCM', true, ['decrypt']));
+      })().catch(() => {
+        try { sessionStorage.removeItem(KEY); } catch (e) {}
+        document.documentElement.className = '';
+        input.focus();
+      });
+    }
+  })();
+  </script>
+</body>
+</html>
